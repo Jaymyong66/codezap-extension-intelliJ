@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>com.example.codezap</id>
+    <name>CodeZap</name>
+    <version>1.0.0</version>
+    <vendor email="mjw8941@korea.ac.kr.com" url="http://www.code-zap.com">Jaewi Myong</vendor>
+
+    <description>
+        A plugin to send selected code snippets to an external API.
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Register actions here -->
+        <action id="com.example.codezap.SendCodeSnippet" class="com.example.codezap.SendCodeSnippetAction" text="Send Code Snippet" description="Send selected code snippet to CodeZap API">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </extensions>
+
+    <actions>
+        <action id="com.example.codezap.SendCodeSnippet" class="com.example.codezap.SendCodeSnippetAction" text="Send Code Snippet" description="Send selected code snippet to CodeZap API">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
